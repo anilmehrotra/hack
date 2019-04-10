@@ -3,10 +3,14 @@ package ing.bank.retail.token;
 public class Singleton {
 	private static Singleton single_instance = null;
 
-	public static String token;
+	public String token;
 
 	private Singleton() {
 		token = "inguser";
+	}
+	
+	public String getToken() {
+		return token;
 	}
 
 	// static method to create instance of Singleton class

@@ -21,7 +21,7 @@ public class Application {
 	}
 	
 	@Bean
-	public Docket postsApi() { 
+	public Docket postsApi() {
 		return new Docket(DocumentationType.SWAGGER_2).groupName("public-api")
 				.apiInfo(apiInfo()).select().paths(postPaths()).build();
 	}
@@ -34,8 +34,8 @@ public class Application {
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("Ing API")
 				.description("Ing Product Group API reference for developers")
-				.termsOfServiceUrl("http://ing.com").license("Ing License")
+				.termsOfServiceUrl("http://ing.com")
+				.contact("squad2@hcl.com").license("Ing License")
 				.licenseUrl("squad2@hcl.com").version("1.0").build();
 	}
-
 }
